@@ -19,7 +19,8 @@ namespace Quanlithuvien
 
         private void Registerform_Load(object sender, EventArgs e)
         {
-
+            txtPassword.UseSystemPasswordChar = true;
+            txtConfirm.UseSystemPasswordChar = true;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -57,6 +58,25 @@ namespace Quanlithuvien
             Form1 loginForm = new Form1();
             loginForm.Show();
             this.Hide();
+        }
+
+        private void Register_showpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPass.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+                txtConfirm.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+                txtConfirm.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Login Successfully");
         }
     }
 }
