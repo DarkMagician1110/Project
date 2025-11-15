@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Quanlithuvien
 {
-    public partial class AdminMainform : Form
+    public partial class Books : UserControl
     {
-        public AdminMainform()
+        public Books()
         {
             InitializeComponent();
         }
 
-        private void close_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Addbook.cs">
+    <Compile Include="Books.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Addbook.Designer.cs">
-      <DependentUpon>Addbook.cs</DependentUpon>
+    <Compile Include="Books.Designer.cs">
+      <DependentUpon>Books.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminMainform.cs">
       <SubType>Form</SubType>
@@ -64,11 +64,11 @@
     <Compile Include="AdDashBoard.Designer.cs">
       <DependentUpon>AdDashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="SignInForm.Designer.cs">
+      <DependentUpon>SignInForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,17 +78,23 @@
     <Compile Include="Registerform.Designer.cs">
       <DependentUpon>Registerform.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdDashBoard.resx">
       <DependentUpon>AdDashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Addbook.resx">
-      <DependentUpon>Addbook.cs</DependentUpon>
+    <EmbeddedResource Include="Books.resx">
+      <DependentUpon>Books.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMainform.resx">
       <DependentUpon>AdminMainform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="SignInForm.resx">
+      <DependentUpon>SignInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="Registerform.resx">
       <DependentUpon>Registerform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

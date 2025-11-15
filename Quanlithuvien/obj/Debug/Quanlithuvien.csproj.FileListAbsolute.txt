@@ -1,11 +1,14 @@
-C:\Users\khanh\source\repos\BTTH1\Quanlithuvien\bin\Debug\Quanlithuvien.exe.config
-C:\Users\khanh\source\repos\BTTH1\Quanlithuvien\bin\Debug\Quanlithuvien.exe
-C:\Users\khanh\source\repos\BTTH1\Quanlithuvien\bin\Debug\Quanlithuvien.pdb
-C:\Users\khanh\source\repos\BTTH1\Quanlithuvien\obj\Debug\Quanlithuvien.csproj.AssemblyReference.cache
-C:\Users\khanh\source\repos\BTTH1\Quanlithuvien\obj\Debug\Quanlithuvien.Properties.Resources.resources
-C:\Users\khanh\source\repos\BTTH1\Quanlithuvien\obj\Debug\Quanlithuvien.csproj.GenerateResource.cache
-C:\Users\khanh\source\repos\BTTH1\Quanlithuvien\obj\Debug\Quanlithuvien.csproj.CoreCompileInputs.cache
-C:\Users\khanh\source\repos\BTTH1\Quanlithuvien\obj\Debug\Quanlithuvien.exe
-C:\Users\khanh\source\repos\BTTH1\Quanlithuvien\obj\Debug\Quanlithuvien.pdb
-C:\Users\khanh\source\repos\BTTH1\Quanlithuvien\obj\Debug\Quanlithuvien.Form1.resources
-C:\Users\khanh\source\repos\BTTH1\Quanlithuvien\obj\Debug\Quanlithuvien.Registerform.resources
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.csproj.AssemblyReference.cache
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\bin\Debug\Quanlithuvien.exe.config
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\bin\Debug\Quanlithuvien.exe
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\bin\Debug\Quanlithuvien.pdb
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.AdDashBoard.resources
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.Books.resources
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.AdminMainform.resources
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.SignInForm.resources
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.Properties.Resources.resources
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.Registerform.resources
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.csproj.GenerateResource.cache
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.csproj.CoreCompileInputs.cache
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.exe
+C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.pdb

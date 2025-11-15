@@ -55,7 +55,7 @@ namespace Quanlithuvien
 
         private void Register_loginbtn_Click(object sender, EventArgs e)
         {
-            Form1 loginForm = new Form1();
+            SignInForm loginForm = new SignInForm();
             loginForm.Show();
             this.Hide();
         }
