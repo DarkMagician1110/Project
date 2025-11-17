@@ -29,15 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Findtb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Tacgiatb = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.Soluong_tb = new System.Windows.Forms.TextBox();
+            this.Soluongtb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.Update_btn = new System.Windows.Forms.Button();
             this.Delete_btn = new System.Windows.Forms.Button();
@@ -45,20 +48,19 @@
             this.Add_btn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.NgayNhap_tb = new System.Windows.Forms.TextBox();
+            this.NamXBtb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Ten_tb = new System.Windows.Forms.TextBox();
+            this.Tentb = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.iD_tb = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.iDtb = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.NhaXBtb = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,7 +68,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.listBox3);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.Findtb);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,16 +77,41 @@
             this.panel1.Size = new System.Drawing.Size(1212, 370);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // listBox3
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1182, 307);
-            this.dataGridView1.TabIndex = 1;
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 25;
+            this.listBox3.Items.AddRange(new object[] {
+            "Name",
+            "Catory",
+            "Author"});
+            this.listBox3.Location = new System.Drawing.Point(810, 12);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(92, 29);
+            this.listBox3.TabIndex = 26;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(1088, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 27);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Find";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // Findtb
+            // 
+            this.Findtb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Findtb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Findtb.Location = new System.Drawing.Point(908, 12);
+            this.Findtb.Name = "Findtb";
+            this.Findtb.Size = new System.Drawing.Size(162, 30);
+            this.Findtb.TabIndex = 25;
             // 
             // label1
             // 
@@ -100,7 +127,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(124, 63);
+            this.label2.Location = new System.Drawing.Point(124, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 26);
             this.label2.TabIndex = 0;
@@ -110,11 +137,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.NhaXBtb);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.Tacgiatb);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.listBox1);
-            this.panel2.Controls.Add(this.Soluong_tb);
+            this.panel2.Controls.Add(this.Soluongtb);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.Update_btn);
             this.panel2.Controls.Add(this.Delete_btn);
@@ -122,16 +151,25 @@
             this.panel2.Controls.Add(this.Add_btn);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.NgayNhap_tb);
+            this.panel2.Controls.Add(this.NamXBtb);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.Ten_tb);
+            this.panel2.Controls.Add(this.Tentb);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.iD_tb);
+            this.panel2.Controls.Add(this.iDtb);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(18, 394);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1212, 336);
             this.panel2.TabIndex = 2;
+            // 
+            // Tacgiatb
+            // 
+            this.Tacgiatb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Tacgiatb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tacgiatb.Location = new System.Drawing.Point(163, 160);
+            this.Tacgiatb.Name = "Tacgiatb";
+            this.Tacgiatb.Size = new System.Drawing.Size(291, 30);
+            this.Tacgiatb.TabIndex = 20;
             // 
             // button2
             // 
@@ -168,25 +206,25 @@
             this.listBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 24;
-            this.listBox1.Location = new System.Drawing.Point(163, 153);
+            this.listBox1.Location = new System.Drawing.Point(163, 119);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(291, 28);
             this.listBox1.TabIndex = 16;
             // 
-            // Soluong_tb
+            // Soluongtb
             // 
-            this.Soluong_tb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Soluong_tb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Soluong_tb.Location = new System.Drawing.Point(624, 107);
-            this.Soluong_tb.Name = "Soluong_tb";
-            this.Soluong_tb.Size = new System.Drawing.Size(291, 30);
-            this.Soluong_tb.TabIndex = 15;
+            this.Soluongtb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Soluongtb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Soluongtb.Location = new System.Drawing.Point(624, 115);
+            this.Soluongtb.Name = "Soluongtb";
+            this.Soluongtb.Size = new System.Drawing.Size(291, 30);
+            this.Soluongtb.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(529, 114);
+            this.label7.Location = new System.Drawing.Point(529, 122);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 24);
             this.label7.TabIndex = 14;
@@ -250,7 +288,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(55, 153);
+            this.label6.Location = new System.Drawing.Point(55, 119);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 26);
             this.label6.TabIndex = 8;
@@ -260,103 +298,88 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(544, 157);
+            this.label5.Location = new System.Drawing.Point(83, 166);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 24);
             this.label5.TabIndex = 6;
             this.label5.Text = "Author";
             // 
-            // NgayNhap_tb
+            // NamXBtb
             // 
-            this.NgayNhap_tb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NgayNhap_tb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NgayNhap_tb.Location = new System.Drawing.Point(624, 62);
-            this.NgayNhap_tb.Name = "NgayNhap_tb";
-            this.NgayNhap_tb.Size = new System.Drawing.Size(291, 30);
-            this.NgayNhap_tb.TabIndex = 5;
+            this.NamXBtb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NamXBtb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NamXBtb.Location = new System.Drawing.Point(624, 70);
+            this.NamXBtb.Name = "NamXBtb";
+            this.NamXBtb.Size = new System.Drawing.Size(291, 30);
+            this.NamXBtb.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(508, 68);
+            this.label4.Location = new System.Drawing.Point(460, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 24);
+            this.label4.Size = new System.Drawing.Size(164, 24);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Date Entry";
+            this.label4.Text = "Publication Date";
             // 
-            // Ten_tb
+            // Tentb
             // 
-            this.Ten_tb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Ten_tb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ten_tb.Location = new System.Drawing.Point(163, 108);
-            this.Ten_tb.Name = "Ten_tb";
-            this.Ten_tb.Size = new System.Drawing.Size(291, 30);
-            this.Ten_tb.TabIndex = 3;
+            this.Tentb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Tentb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tentb.Location = new System.Drawing.Point(163, 74);
+            this.Tentb.Name = "Tentb";
+            this.Tentb.Size = new System.Drawing.Size(291, 30);
+            this.Tentb.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(88, 107);
+            this.label3.Location = new System.Drawing.Point(88, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 26);
             this.label3.TabIndex = 2;
             this.label3.Text = "Name";
             // 
-            // iD_tb
+            // iDtb
             // 
-            this.iD_tb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.iD_tb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iD_tb.Location = new System.Drawing.Point(163, 62);
-            this.iD_tb.Name = "iD_tb";
-            this.iD_tb.Size = new System.Drawing.Size(291, 30);
-            this.iD_tb.TabIndex = 1;
+            this.iDtb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.iDtb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iDtb.Location = new System.Drawing.Point(163, 28);
+            this.iDtb.Name = "iDtb";
+            this.iDtb.Size = new System.Drawing.Size(291, 30);
+            this.iDtb.TabIndex = 1;
             // 
-            // button1
+            // dataGridView1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(1088, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 27);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Find";
-            this.button1.UseVisualStyleBackColor = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 50);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1182, 307);
+            this.dataGridView1.TabIndex = 1;
             // 
-            // textBox5
+            // label8
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(908, 12);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(162, 30);
-            this.textBox5.TabIndex = 25;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(519, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 24);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Publisher";
             // 
-            // listBox3
+            // NhaXBtb
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 25;
-            this.listBox3.Items.AddRange(new object[] {
-            "Name",
-            "Catory",
-            "Author"});
-            this.listBox3.Location = new System.Drawing.Point(810, 12);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(92, 29);
-            this.listBox3.TabIndex = 26;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(624, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(291, 30);
-            this.textBox1.TabIndex = 20;
+            this.NhaXBtb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NhaXBtb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhaXBtb.Location = new System.Drawing.Point(624, 26);
+            this.NhaXBtb.Name = "NhaXBtb";
+            this.NhaXBtb.Size = new System.Drawing.Size(291, 30);
+            this.NhaXBtb.TabIndex = 22;
             // 
             // Books
             // 
@@ -366,13 +389,14 @@
             this.Controls.Add(this.panel1);
             this.Name = "Books";
             this.Size = new System.Drawing.Size(1251, 745);
+            this.Load += new System.EventHandler(this.Books_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -381,20 +405,19 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox iD_tb;
-        private System.Windows.Forms.TextBox Ten_tb;
+        private System.Windows.Forms.TextBox iDtb;
+        private System.Windows.Forms.TextBox Tentb;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox NgayNhap_tb;
+        private System.Windows.Forms.TextBox NamXBtb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Delete_btn;
         private System.Windows.Forms.Button Clear_btn;
         private System.Windows.Forms.Button Add_btn;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox Soluong_tb;
+        private System.Windows.Forms.TextBox Soluongtb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Update_btn;
         private System.Windows.Forms.ListBox listBox1;
@@ -403,7 +426,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Findtb;
+        private System.Windows.Forms.TextBox Tacgiatb;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox NhaXBtb;
+        private System.Windows.Forms.Label label8;
     }
 }

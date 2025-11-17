@@ -64,6 +64,7 @@
     <Compile Include="AdDashBoard.Designer.cs">
       <DependentUpon>AdDashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBConnect.cs" />
     <Compile Include="SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>

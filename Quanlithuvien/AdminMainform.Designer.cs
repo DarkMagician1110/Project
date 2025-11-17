@@ -34,13 +34,14 @@
             this.close = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Logoutbt = new System.Windows.Forms.Button();
+            this.Userbt = new System.Windows.Forms.Button();
+            this.Bookbt = new System.Windows.Forms.Button();
+            this.DashBoardbt = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,10 +91,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.Logoutbt);
+            this.panel2.Controls.Add(this.Userbt);
+            this.panel2.Controls.Add(this.Bookbt);
+            this.panel2.Controls.Add(this.DashBoardbt);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -102,53 +103,67 @@
             this.panel2.Size = new System.Drawing.Size(241, 745);
             this.panel2.TabIndex = 1;
             // 
-            // button5
+            // pictureBox1
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(6, 677);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(228, 56);
-            this.button5.TabIndex = 30;
-            this.button5.Text = "Logout";
-            this.button5.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(36, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(151, 165);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
             // 
-            // button4
+            // Logoutbt
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(6, 471);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(228, 56);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "Users";
-            this.button4.UseVisualStyleBackColor = false;
+            this.Logoutbt.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.Logoutbt.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logoutbt.ForeColor = System.Drawing.Color.Black;
+            this.Logoutbt.Location = new System.Drawing.Point(6, 677);
+            this.Logoutbt.Name = "Logoutbt";
+            this.Logoutbt.Size = new System.Drawing.Size(228, 56);
+            this.Logoutbt.TabIndex = 30;
+            this.Logoutbt.Text = "Logout";
+            this.Logoutbt.UseVisualStyleBackColor = false;
+            this.Logoutbt.Click += new System.EventHandler(this.Logoutbt_Click);
             // 
-            // button1
+            // Userbt
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(6, 409);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 56);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Books";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Userbt.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.Userbt.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Userbt.ForeColor = System.Drawing.Color.Black;
+            this.Userbt.Location = new System.Drawing.Point(6, 471);
+            this.Userbt.Name = "Userbt";
+            this.Userbt.Size = new System.Drawing.Size(228, 56);
+            this.Userbt.TabIndex = 29;
+            this.Userbt.Text = "Users";
+            this.Userbt.UseVisualStyleBackColor = false;
+            this.Userbt.Click += new System.EventHandler(this.Userbt_Click);
             // 
-            // button3
+            // Bookbt
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(6, 347);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(228, 56);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "DashBoard";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Bookbt.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.Bookbt.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bookbt.ForeColor = System.Drawing.Color.Black;
+            this.Bookbt.Location = new System.Drawing.Point(6, 409);
+            this.Bookbt.Name = "Bookbt";
+            this.Bookbt.Size = new System.Drawing.Size(228, 56);
+            this.Bookbt.TabIndex = 27;
+            this.Bookbt.Text = "Books";
+            this.Bookbt.UseVisualStyleBackColor = false;
+            this.Bookbt.Click += new System.EventHandler(this.Bookbt_Click);
+            // 
+            // DashBoardbt
+            // 
+            this.DashBoardbt.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.DashBoardbt.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashBoardbt.ForeColor = System.Drawing.Color.Black;
+            this.DashBoardbt.Location = new System.Drawing.Point(6, 347);
+            this.DashBoardbt.Name = "DashBoardbt";
+            this.DashBoardbt.Size = new System.Drawing.Size(228, 56);
+            this.DashBoardbt.TabIndex = 26;
+            this.DashBoardbt.Text = "DashBoard";
+            this.DashBoardbt.UseVisualStyleBackColor = false;
+            this.DashBoardbt.Click += new System.EventHandler(this.DashBoardbt_Click);
             // 
             // label3
             // 
@@ -172,21 +187,19 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "Admin\'s portal";
             // 
-            // pictureBox1
+            // panelContainer
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(151, 165);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
+            this.panelContainer.Location = new System.Drawing.Point(242, 46);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1258, 744);
+            this.panelContainer.TabIndex = 2;
             // 
             // AdminMainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 790);
+            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -211,10 +224,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Logoutbt;
+        private System.Windows.Forms.Button Userbt;
+        private System.Windows.Forms.Button Bookbt;
+        private System.Windows.Forms.Button DashBoardbt;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelContainer;
     }
 }
