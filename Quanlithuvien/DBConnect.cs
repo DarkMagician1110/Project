@@ -9,7 +9,7 @@ namespace Quanlithuvien
 {
     internal class DBConnect
     {
-        private string connStr = @"Server=LAPTOP-TFMSKHRA;Database=LMS;User Id=LIBRARY-DATABASE;Password=123456789;";
+        private string connStr = @"Server=LAPTOP-TR083D7U;Database=LMS;User Id=sa;Password=lehuutrung11102006;";
 
 
         public SqlConnection GetConnection()

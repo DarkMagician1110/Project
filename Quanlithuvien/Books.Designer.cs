@@ -31,36 +31,37 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.Findtb = new System.Windows.Forms.TextBox();
+            this.txtSearchName = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Tacgiatb = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtReceivedDate = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtNXB = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtAuthor = new System.Windows.Forms.TextBox();
+            this.btnImport = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.Soluongtb = new System.Windows.Forms.TextBox();
+            this.lbCategory = new System.Windows.Forms.ListBox();
+            this.txtQuanlity = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.Update_btn = new System.Windows.Forms.Button();
-            this.Delete_btn = new System.Windows.Forms.Button();
-            this.Clear_btn = new System.Windows.Forms.Button();
-            this.Add_btn = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.NamXBtb = new System.Windows.Forms.TextBox();
+            this.txtNamXB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Tentb = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.iDtb = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.NhaXBtb = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,7 +69,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.listBox3);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.Findtb);
+            this.panel1.Controls.Add(this.txtSearchName);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -83,11 +84,11 @@
             this.listBox3.ItemHeight = 25;
             this.listBox3.Items.AddRange(new object[] {
             "Name",
-            "Catory",
+            "Category",
             "Author"});
-            this.listBox3.Location = new System.Drawing.Point(810, 12);
+            this.listBox3.Location = new System.Drawing.Point(774, 12);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(92, 29);
+            this.listBox3.Size = new System.Drawing.Size(128, 29);
             this.listBox3.TabIndex = 26;
             // 
             // button1
@@ -103,15 +104,31 @@
             this.button1.TabIndex = 24;
             this.button1.Text = "Find";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Findtb
+            // txtSearchName
             // 
-            this.Findtb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Findtb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Findtb.Location = new System.Drawing.Point(908, 12);
-            this.Findtb.Name = "Findtb";
-            this.Findtb.Size = new System.Drawing.Size(162, 30);
-            this.Findtb.TabIndex = 25;
+            this.txtSearchName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchName.Location = new System.Drawing.Point(908, 12);
+            this.txtSearchName.Name = "txtSearchName";
+            this.txtSearchName.Size = new System.Drawing.Size(162, 30);
+            this.txtSearchName.TabIndex = 25;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 50);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1182, 307);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -132,57 +149,95 @@
             this.label2.Size = new System.Drawing.Size(33, 26);
             this.label2.TabIndex = 0;
             this.label2.Text = "ID";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.NhaXBtb);
+            this.panel2.Controls.Add(this.txtReceivedDate);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.txtNXB);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.Tacgiatb);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.txtAuthor);
+            this.panel2.Controls.Add(this.btnImport);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.listBox1);
-            this.panel2.Controls.Add(this.Soluongtb);
+            this.panel2.Controls.Add(this.lbCategory);
+            this.panel2.Controls.Add(this.txtQuanlity);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.Update_btn);
-            this.panel2.Controls.Add(this.Delete_btn);
-            this.panel2.Controls.Add(this.Clear_btn);
-            this.panel2.Controls.Add(this.Add_btn);
+            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.NamXBtb);
+            this.panel2.Controls.Add(this.txtNamXB);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.Tentb);
+            this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.iDtb);
+            this.panel2.Controls.Add(this.txtID);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(18, 394);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1212, 336);
             this.panel2.TabIndex = 2;
             // 
-            // Tacgiatb
+            // txtReceivedDate
             // 
-            this.Tacgiatb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Tacgiatb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tacgiatb.Location = new System.Drawing.Point(163, 160);
-            this.Tacgiatb.Name = "Tacgiatb";
-            this.Tacgiatb.Size = new System.Drawing.Size(291, 30);
-            this.Tacgiatb.TabIndex = 20;
+            this.txtReceivedDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtReceivedDate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceivedDate.Location = new System.Drawing.Point(641, 115);
+            this.txtReceivedDate.Name = "txtReceivedDate";
+            this.txtReceivedDate.Size = new System.Drawing.Size(291, 30);
+            this.txtReceivedDate.TabIndex = 24;
             // 
-            // button2
+            // label9
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(1022, 223);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 45);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Import";
-            this.button2.UseVisualStyleBackColor = false;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(478, 121);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(145, 24);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Received Date";
+            // 
+            // txtNXB
+            // 
+            this.txtNXB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNXB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNXB.Location = new System.Drawing.Point(641, 26);
+            this.txtNXB.Name = "txtNXB";
+            this.txtNXB.Size = new System.Drawing.Size(291, 30);
+            this.txtNXB.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(519, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 24);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Publisher";
+            // 
+            // txtAuthor
+            // 
+            this.txtAuthor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAuthor.Location = new System.Drawing.Point(163, 160);
+            this.txtAuthor.Name = "txtAuthor";
+            this.txtAuthor.Size = new System.Drawing.Size(291, 30);
+            this.txtAuthor.TabIndex = 20;
+            // 
+            // btnImport
+            // 
+            this.btnImport.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImport.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnImport.Location = new System.Drawing.Point(1022, 223);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(115, 45);
+            this.btnImport.TabIndex = 19;
+            this.btnImport.Text = "Import";
+            this.btnImport.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -201,88 +256,90 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // listBox1
+            // lbCategory
             // 
-            this.listBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 24;
-            this.listBox1.Location = new System.Drawing.Point(163, 119);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(291, 28);
-            this.listBox1.TabIndex = 16;
+            this.lbCategory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCategory.FormattingEnabled = true;
+            this.lbCategory.ItemHeight = 24;
+            this.lbCategory.Items.AddRange(new object[] {
+            "Tiếng Anh",
+            "Chính Trị",
+            "Công Nghệ Thông Tin",
+            "Kinh Tế ",
+            "Môi Trường",
+            "Tâm Lý",
+            "Tiểu Thuyết",
+            "Khoa Học Viến Tưỡng",
+            "Trinh Thám",
+            "Lịch Sử",
+            "Lãng Mạn"});
+            this.lbCategory.Location = new System.Drawing.Point(163, 119);
+            this.lbCategory.Name = "lbCategory";
+            this.lbCategory.Size = new System.Drawing.Size(291, 28);
+            this.lbCategory.TabIndex = 16;
             // 
-            // Soluongtb
+            // txtQuanlity
             // 
-            this.Soluongtb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Soluongtb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Soluongtb.Location = new System.Drawing.Point(624, 115);
-            this.Soluongtb.Name = "Soluongtb";
-            this.Soluongtb.Size = new System.Drawing.Size(291, 30);
-            this.Soluongtb.TabIndex = 15;
+            this.txtQuanlity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQuanlity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuanlity.Location = new System.Drawing.Point(641, 160);
+            this.txtQuanlity.Name = "txtQuanlity";
+            this.txtQuanlity.Size = new System.Drawing.Size(291, 30);
+            this.txtQuanlity.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(529, 122);
+            this.label7.Location = new System.Drawing.Point(532, 162);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 24);
+            this.label7.Size = new System.Drawing.Size(91, 24);
             this.label7.TabIndex = 14;
-            this.label7.Text = "Quanlity";
+            this.label7.Text = "Quantity";
             // 
-            // Update_btn
+            // btnUpdate
             // 
-            this.Update_btn.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.Update_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Update_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Update_btn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Update_btn.Location = new System.Drawing.Point(357, 223);
-            this.Update_btn.Name = "Update_btn";
-            this.Update_btn.Size = new System.Drawing.Size(120, 45);
-            this.Update_btn.TabIndex = 13;
-            this.Update_btn.Text = "Update";
-            this.Update_btn.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.Location = new System.Drawing.Point(498, 223);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(120, 45);
+            this.btnUpdate.TabIndex = 13;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // Delete_btn
+            // btnDelete
             // 
-            this.Delete_btn.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.Delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Delete_btn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Delete_btn.Location = new System.Drawing.Point(546, 223);
-            this.Delete_btn.Name = "Delete_btn";
-            this.Delete_btn.Size = new System.Drawing.Size(120, 45);
-            this.Delete_btn.TabIndex = 12;
-            this.Delete_btn.Text = "Delete";
-            this.Delete_btn.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelete.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDelete.Location = new System.Drawing.Point(687, 223);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(120, 45);
+            this.btnDelete.TabIndex = 12;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // Clear_btn
+            // btnAdd
             // 
-            this.Clear_btn.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.Clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Clear_btn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Clear_btn.Location = new System.Drawing.Point(729, 223);
-            this.Clear_btn.Name = "Clear_btn";
-            this.Clear_btn.Size = new System.Drawing.Size(120, 45);
-            this.Clear_btn.TabIndex = 11;
-            this.Clear_btn.Text = "Clear";
-            this.Clear_btn.UseVisualStyleBackColor = false;
-            // 
-            // Add_btn
-            // 
-            this.Add_btn.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.Add_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Add_btn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Add_btn.Location = new System.Drawing.Point(184, 223);
-            this.Add_btn.Name = "Add_btn";
-            this.Add_btn.Size = new System.Drawing.Size(120, 45);
-            this.Add_btn.TabIndex = 10;
-            this.Add_btn.Text = "Add";
-            this.Add_btn.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.Location = new System.Drawing.Point(325, 223);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(120, 45);
+            this.btnAdd.TabIndex = 10;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label6
             // 
@@ -304,14 +361,14 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Author";
             // 
-            // NamXBtb
+            // txtNamXB
             // 
-            this.NamXBtb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NamXBtb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NamXBtb.Location = new System.Drawing.Point(624, 70);
-            this.NamXBtb.Name = "NamXBtb";
-            this.NamXBtb.Size = new System.Drawing.Size(291, 30);
-            this.NamXBtb.TabIndex = 5;
+            this.txtNamXB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNamXB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamXB.Location = new System.Drawing.Point(641, 70);
+            this.txtNamXB.Name = "txtNamXB";
+            this.txtNamXB.Size = new System.Drawing.Size(291, 30);
+            this.txtNamXB.TabIndex = 5;
             // 
             // label4
             // 
@@ -319,18 +376,18 @@
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(460, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 24);
+            this.label4.Size = new System.Drawing.Size(163, 24);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Publication Date";
+            this.label4.Text = "Publication Year";
             // 
-            // Tentb
+            // txtName
             // 
-            this.Tentb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Tentb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tentb.Location = new System.Drawing.Point(163, 74);
-            this.Tentb.Name = "Tentb";
-            this.Tentb.Size = new System.Drawing.Size(291, 30);
-            this.Tentb.TabIndex = 3;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(163, 74);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(291, 30);
+            this.txtName.TabIndex = 3;
             // 
             // label3
             // 
@@ -342,44 +399,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Name";
             // 
-            // iDtb
+            // txtID
             // 
-            this.iDtb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.iDtb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iDtb.Location = new System.Drawing.Point(163, 28);
-            this.iDtb.Name = "iDtb";
-            this.iDtb.Size = new System.Drawing.Size(291, 30);
-            this.iDtb.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1182, 307);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(519, 28);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 24);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Publisher";
-            // 
-            // NhaXBtb
-            // 
-            this.NhaXBtb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NhaXBtb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NhaXBtb.Location = new System.Drawing.Point(624, 26);
-            this.NhaXBtb.Name = "NhaXBtb";
-            this.NhaXBtb.Size = new System.Drawing.Size(291, 30);
-            this.NhaXBtb.TabIndex = 22;
+            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(163, 28);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(291, 30);
+            this.txtID.TabIndex = 1;
             // 
             // Books
             // 
@@ -392,11 +419,11 @@
             this.Load += new System.EventHandler(this.Books_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -407,29 +434,30 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox iDtb;
-        private System.Windows.Forms.TextBox Tentb;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox NamXBtb;
+        private System.Windows.Forms.TextBox txtNamXB;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Delete_btn;
-        private System.Windows.Forms.Button Clear_btn;
-        private System.Windows.Forms.Button Add_btn;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox Soluongtb;
+        private System.Windows.Forms.TextBox txtQuanlity;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button Update_btn;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.ListBox lbCategory;
+        private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox Findtb;
-        private System.Windows.Forms.TextBox Tacgiatb;
+        private System.Windows.Forms.TextBox txtSearchName;
+        private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox NhaXBtb;
+        private System.Windows.Forms.TextBox txtNXB;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtReceivedDate;
+        private System.Windows.Forms.Label label9;
     }
 }

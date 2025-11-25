@@ -12,9 +12,11 @@ namespace Quanlithuvien
 {
     public partial class AdminMainform : Form
     {
-        public AdminMainform()
+        private string currentUsername;
+        public AdminMainform(string username)
         {
             InitializeComponent();
+            currentUsername = username;
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -22,6 +24,10 @@ namespace Quanlithuvien
             Application.Exit();
         }
 
+        private void DashBoard_Load(object sender, EventArgs e)
+        {
+            label3.Text = "Username: " + currentUsername;
+        }
         private void DashBoardbt_Click(object sender, EventArgs e)
         {
             AdDashBoard DBooks = new AdDashBoard();
@@ -52,5 +58,7 @@ namespace Quanlithuvien
             loginForm.Show();
             this.Hide();
         }
+
+      
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,9 @@ namespace Quanlithuvien
 {
     public partial class SignInForm : Form
     {
+        private SqlConnection conn;
+        private SqlCommand cmd;
+
         public SignInForm()
         {
             InitializeComponent();
@@ -21,37 +25,6 @@ namespace Quanlithuvien
         {
             txtPassword.UseSystemPasswordChar = true;
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void close_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -66,19 +39,26 @@ namespace Quanlithuvien
 
         private void Login_btn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "Login Successfully",
-                "Information",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information); 
-            AdminMainform adminmainForm = new AdminMainform();  
-            adminmainForm.Show();
-            this.Hide();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            string username = txtUsername.Text;
+            string query = "SELECT COUNT(*) FROM QLDANGNHAP WHERE UserName = @username AND Password = @password";
+            DBConnect dbConnect = new DBConnect();
+            conn = dbConnect.GetConnection();
+            conn.Open();
+            cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@username", txtUsername.Text);
+            cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+            int count = (int)cmd.ExecuteScalar();
+            if (count > 0)
+            {
+                MessageBox.Show("Login successful!");
+                AdminMainform adminMainform = new AdminMainform(username);
+                adminMainform.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password. Please try again.");
+            }
         }
 
         private void chkPassword_CheckedChanged(object sender, EventArgs e)
@@ -93,7 +73,7 @@ namespace Quanlithuvien
             }
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void lblSignIn_Click(object sender, EventArgs e)
         {
 
         }

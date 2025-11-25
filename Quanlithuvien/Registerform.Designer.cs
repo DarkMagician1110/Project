@@ -77,7 +77,6 @@
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.Size = new System.Drawing.Size(347, 30);
             this.txtConfirm.TabIndex = 13;
-            this.txtConfirm.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // lblPassword
             // 
@@ -88,7 +87,6 @@
             this.lblPassword.Size = new System.Drawing.Size(97, 24);
             this.lblPassword.TabIndex = 12;
             this.lblPassword.Text = "Password:";
-            this.lblPassword.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtUsername
             // 
@@ -118,7 +116,6 @@
             this.lblRegister.TabIndex = 9;
             this.lblRegister.Text = "REGISTER";
             this.lblRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblRegister.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
@@ -166,7 +163,6 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Already have a account?";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // btnSignIn
             // 
@@ -188,7 +184,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(347, 30);
             this.txtPassword.TabIndex = 17;
-            this.txtPassword.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // lblConfirm
             // 

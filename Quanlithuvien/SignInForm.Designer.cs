@@ -65,7 +65,7 @@
             this.lblSignIn.TabIndex = 2;
             this.lblSignIn.Text = "SIGN IN";
             this.lblSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblSignIn.Click += new System.EventHandler(this.label2_Click);
+            this.lblSignIn.Click += new System.EventHandler(this.lblSignIn_Click);
             // 
             // lblUsername
             // 
@@ -76,7 +76,6 @@
             this.lblUsername.Size = new System.Drawing.Size(102, 24);
             this.lblUsername.TabIndex = 3;
             this.lblUsername.Text = "Username:";
-            this.lblUsername.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtUsername
             // 
@@ -85,7 +84,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(347, 30);
             this.txtUsername.TabIndex = 4;
-            this.txtUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtPassword
             // 
@@ -140,7 +138,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(429, 485);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label7
             // 
@@ -152,7 +149,6 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "By Thắng And Two other";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // lblTitle
             // 
@@ -176,7 +172,6 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Don\'t you have an account?\r\n\r\n";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // btnRegister
             // 
@@ -191,7 +186,7 @@
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.Signin_registerbtn_Click);
             // 
-            // Form1
+            // SignInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -206,7 +201,7 @@
             this.Controls.Add(this.close);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "SignInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

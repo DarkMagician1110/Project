@@ -23,20 +23,57 @@ namespace Quanlithuvien
             InitializeComponent();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private int tongSoSach()
         {
-
+            if (dt == null)
+            {
+                return 0;
+            }
+            return dt.Rows.Count;
+        }
+        private int tongSLSachChoMuon()
+        {
+            if (dt == null)
+            {
+                return 0;
+            }
+            int count = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                if (Convert.ToInt32(row["TinhTrang"]) == 1)
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private int SoNguoiMuon ()
         {
-
+            if (dt == null) {
+                return 0;
+            }
+            HashSet<string> uniqueBorrowers = new HashSet<string>();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (Convert.ToInt32(row["TinhTrang"]) == 1)
+                {
+                    uniqueBorrowers.Add(row["NguoiMuon"].ToString());
+                }
+            }
+            return uniqueBorrowers.Count;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        //private int SoSachQuaHan()
+        //{
+        //    if (dt == null)
+        //    {
+        //        return 0;
+        //    }
+        //    int count = 0;
+            
+        //    return count;
+        //}
 
         private void AdDashBoard_Load(object sender, EventArgs e)
         {
@@ -54,6 +91,10 @@ namespace Quanlithuvien
             dataGridView1.DataSource = dt;         // Gán dữ liệu từ dt cho DataGridView trong Form AdDashBoard
 
             conn.Close();                        // Đóng kết nối
+
+            label2.Text = tongSoSach().ToString();
+            label3.Text = tongSLSachChoMuon().ToString();
+            label5.Text = SoNguoiMuon().ToString();
 
         }
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Quanlithuvien
 {
     public partial class Registerform : Form
     {
+        private SqlConnection conn;
+        private SqlCommand cmd;
         public Registerform()
         {
             InitializeComponent();
@@ -23,30 +26,6 @@ namespace Quanlithuvien
             txtConfirm.UseSystemPasswordChar = true;
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void close_Click(object sender, EventArgs e)
         {
@@ -76,7 +55,43 @@ namespace Quanlithuvien
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Login Successfully");
+            try
+            {
+                if (txtPassword.Text != txtConfirm.Text)
+                {
+                    MessageBox.Show("Password and Confirm Password do not match.");
+                    return;
+                }
+                DBConnect dBregister = new DBConnect();
+                conn = dBregister.GetConnection();
+                conn.Open();
+
+                string checkStr = "SELECT COUNT(*) FROM QLDANGNHAP WHERE UserName = @username";
+                SqlCommand checkCmd = new SqlCommand(checkStr, conn);
+                checkCmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                int userCount = (int)checkCmd.ExecuteScalar();
+                if (userCount > 0)
+                {
+                    MessageBox.Show("Username already exists. Please choose a different username.");
+                    return;
+                }
+
+                string sqlStr = "INSERT INTO QLDANGNHAP (UserName, PassWord) VALUES (@username, @password)";
+                cmd = new SqlCommand(sqlStr, conn);
+                cmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Registration Successful!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
+
     }
 }
