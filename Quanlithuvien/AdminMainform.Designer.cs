@@ -30,10 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainform));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMin = new System.Windows.Forms.Label();
+            this.btnMax = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.close = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Logoutbt = new System.Windows.Forms.Button();
             this.Userbt = new System.Windows.Forms.Button();
@@ -42,8 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,6 +54,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnMin);
+            this.panel1.Controls.Add(this.btnMax);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.close);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
@@ -60,6 +64,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1500, 45);
             this.panel1.TabIndex = 0;
+            // 
+            // btnMin
+            // 
+            this.btnMin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMin.Location = new System.Drawing.Point(1404, -1);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(26, 34);
+            this.btnMin.TabIndex = 22;
+            this.btnMin.Text = "_";
+            this.btnMin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.AutoSize = true;
+            this.btnMax.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.Location = new System.Drawing.Point(1436, 9);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(24, 24);
+            this.btnMax.TabIndex = 21;
+            this.btnMax.Text = "☐";
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
             // 
             // label1
             // 
@@ -106,6 +133,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(241, 745);
             this.panel2.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(8, 584);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(228, 56);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Employee";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(8, 522);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(228, 56);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Borrow/Return";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -176,10 +227,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(12, 282);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 18);
+            this.label3.Size = new System.Drawing.Size(84, 18);
             this.label3.TabIndex = 22;
-            this.label3.Text = "Username: Admin";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Text = "Username:";
             // 
             // label2
             // 
@@ -198,30 +248,6 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1258, 744);
             this.panelContainer.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(8, 522);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 56);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Borrow/Return";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(8, 584);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(228, 56);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Employee";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // AdminMainform
             // 
@@ -262,5 +288,7 @@
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label btnMin;
+        private System.Windows.Forms.Label btnMax;
     }
 }

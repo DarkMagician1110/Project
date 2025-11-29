@@ -91,11 +91,11 @@
     <Compile Include="Registerform.Designer.cs">
       <DependentUpon>Registerform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Users.cs">
+    <Compile Include="Costumer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Users.Designer.cs">
-      <DependentUpon>Users.cs</DependentUpon>
+    <Compile Include="Costumer.Designer.cs">
+      <DependentUpon>Costumer.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdDashBoard.resx">
       <DependentUpon>AdDashBoard.cs</DependentUpon>
@@ -127,8 +127,8 @@
     <EmbeddedResource Include="Registerform.resx">
       <DependentUpon>Registerform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Users.resx">
-      <DependentUpon>Users.cs</DependentUpon>
+    <EmbeddedResource Include="Costumer.resx">
+      <DependentUpon>Costumer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -29,21 +29,12 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtReceivedDate = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtNXB = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtAuthor = new System.Windows.Forms.TextBox();
-            this.lbCategory = new System.Windows.Forms.ListBox();
-            this.txtQuanlity = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtNamXB = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -62,21 +53,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.txtReceivedDate);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.txtNXB);
-            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.txtAuthor);
-            this.panel2.Controls.Add(this.lbCategory);
-            this.panel2.Controls.Add(this.txtQuanlity);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.txtNamXB);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtID);
@@ -86,107 +68,23 @@
             this.panel2.Size = new System.Drawing.Size(1212, 336);
             this.panel2.TabIndex = 4;
             // 
-            // txtReceivedDate
+            // textBox1
             // 
-            this.txtReceivedDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtReceivedDate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceivedDate.Location = new System.Drawing.Point(641, 115);
-            this.txtReceivedDate.Name = "txtReceivedDate";
-            this.txtReceivedDate.Size = new System.Drawing.Size(291, 30);
-            this.txtReceivedDate.TabIndex = 24;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(478, 121);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(145, 24);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Received Date";
-            // 
-            // txtNXB
-            // 
-            this.txtNXB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNXB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNXB.Location = new System.Drawing.Point(641, 26);
-            this.txtNXB.Name = "txtNXB";
-            this.txtNXB.Size = new System.Drawing.Size(291, 30);
-            this.txtNXB.TabIndex = 22;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(519, 28);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 24);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Publisher";
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(731, 88);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(291, 30);
+            this.textBox1.TabIndex = 21;
             // 
             // txtAuthor
             // 
             this.txtAuthor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAuthor.Location = new System.Drawing.Point(163, 160);
+            this.txtAuthor.Location = new System.Drawing.Point(730, 135);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(291, 30);
             this.txtAuthor.TabIndex = 20;
-            // 
-            // lbCategory
-            // 
-            this.lbCategory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCategory.FormattingEnabled = true;
-            this.lbCategory.ItemHeight = 24;
-            this.lbCategory.Items.AddRange(new object[] {
-            "Tiếng Anh",
-            "Chính Trị",
-            "Công Nghệ Thông Tin",
-            "Kinh Tế ",
-            "Môi Trường",
-            "Tâm Lý",
-            "Tiểu Thuyết",
-            "Khoa Học Viến Tưỡng",
-            "Trinh Thám",
-            "Lịch Sử",
-            "Lãng Mạn"});
-            this.lbCategory.Location = new System.Drawing.Point(163, 119);
-            this.lbCategory.Name = "lbCategory";
-            this.lbCategory.Size = new System.Drawing.Size(291, 28);
-            this.lbCategory.TabIndex = 16;
-            // 
-            // txtQuanlity
-            // 
-            this.txtQuanlity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtQuanlity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuanlity.Location = new System.Drawing.Point(641, 160);
-            this.txtQuanlity.Name = "txtQuanlity";
-            this.txtQuanlity.Size = new System.Drawing.Size(291, 30);
-            this.txtQuanlity.TabIndex = 15;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(532, 162);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 24);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Quantity";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUpdate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUpdate.Location = new System.Drawing.Point(498, 223);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(120, 45);
-            this.btnUpdate.TabIndex = 13;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
@@ -194,11 +92,11 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDelete.Location = new System.Drawing.Point(664, 223);
+            this.btnDelete.Location = new System.Drawing.Point(901, 237);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 45);
             this.btnDelete.TabIndex = 12;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "Return";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnAdd
@@ -208,18 +106,18 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.Location = new System.Drawing.Point(325, 223);
+            this.btnAdd.Location = new System.Drawing.Point(738, 237);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(120, 45);
             this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Borrow";
             this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(24, 115);
+            this.label6.Location = new System.Drawing.Point(590, 87);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(135, 26);
             this.label6.TabIndex = 8;
@@ -229,36 +127,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(83, 166);
+            this.label5.Location = new System.Drawing.Point(650, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 24);
             this.label5.TabIndex = 6;
             this.label5.Text = "Date";
             // 
-            // txtNamXB
-            // 
-            this.txtNamXB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNamXB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamXB.Location = new System.Drawing.Point(641, 70);
-            this.txtNamXB.Name = "txtNamXB";
-            this.txtNamXB.Size = new System.Drawing.Size(291, 30);
-            this.txtNamXB.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(460, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(163, 24);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Publication Year";
-            // 
             // txtName
             // 
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(163, 74);
+            this.txtName.Location = new System.Drawing.Point(248, 135);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(291, 30);
             this.txtName.TabIndex = 3;
@@ -267,7 +146,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 75);
+            this.label3.Location = new System.Drawing.Point(108, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 26);
             this.label3.TabIndex = 2;
@@ -277,7 +156,7 @@
             // 
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(163, 28);
+            this.txtID.Location = new System.Drawing.Point(248, 89);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(291, 30);
             this.txtID.TabIndex = 1;
@@ -286,7 +165,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(70, 26);
+            this.label2.Location = new System.Drawing.Point(155, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 26);
             this.label2.TabIndex = 0;
@@ -386,21 +265,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtReceivedDate;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtNXB;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtAuthor;
-        private System.Windows.Forms.ListBox lbCategory;
-        private System.Windows.Forms.TextBox txtQuanlity;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNamXB;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtID;
@@ -411,5 +280,6 @@
         private System.Windows.Forms.TextBox txtSearchName;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -46,7 +46,7 @@ namespace Quanlithuvien
 
         private void Userbt_Click(object sender, EventArgs e)
         {
-            Users us = new Users();
+            Costumer us = new Costumer();
             panelContainer.Controls.Clear();    // xóa control cũ
             panelContainer.Controls.Add(us); // thêm UserControl vào panel
             us.Dock = DockStyle.Fill;        // phóng to vừa panel
@@ -59,9 +59,18 @@ namespace Quanlithuvien
             this.Hide();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnMax_Click(object sender, EventArgs e)
         {
+            if (this.WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
 
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
