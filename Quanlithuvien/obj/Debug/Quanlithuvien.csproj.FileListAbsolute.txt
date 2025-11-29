@@ -12,3 +12,20 @@ C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Q
 C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.csproj.CoreCompileInputs.cache
 C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.exe
 C:\Users\khanh\Downloads\Project-main (1)\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.pdb
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.csproj.AssemblyReference.cache
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.exe
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.pdb
+D:\Project-main\Quanlithuvien\bin\Debug\Quanlithuvien.exe.config
+D:\Project-main\Quanlithuvien\bin\Debug\Quanlithuvien.exe
+D:\Project-main\Quanlithuvien\bin\Debug\Quanlithuvien.pdb
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.AdDashBoard.resources
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.Books.resources
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.AdminMainform.resources
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.SignInForm.resources
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.Properties.Resources.resources
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.Registerform.resources
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.Users.resources
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.csproj.GenerateResource.cache
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.csproj.CoreCompileInputs.cache
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.Employee.resources
+D:\Project-main\Quanlithuvien\obj\Debug\Quanlithuvien.BorrowAndReturn.resources

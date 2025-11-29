@@ -40,7 +40,7 @@ namespace Quanlithuvien
         private void Login_btn_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
-            string query = "SELECT COUNT(*) FROM QLDANGNHAP WHERE UserName = @username AND Password = @password";
+            string query = "SELECT COUNT(*) FROM QLDANGNHAP WHERE username = @username AND password = @password";
             DBConnect dbConnect = new DBConnect();
             conn = dbConnect.GetConnection();
             conn.Open();

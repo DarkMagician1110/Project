@@ -65,13 +65,14 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(14, 287);
+            this.panel2.Location = new System.Drawing.Point(11, 287);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1221, 439);
+            this.panel2.Size = new System.Drawing.Size(1224, 439);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 70);
             this.dataGridView1.Name = "dataGridView1";
@@ -229,7 +230,7 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(14, 22);
+            this.panel3.Location = new System.Drawing.Point(19, 22);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(293, 195);
             this.panel3.TabIndex = 3;

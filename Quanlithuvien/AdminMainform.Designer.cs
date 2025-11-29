@@ -42,6 +42,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,6 +92,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.Logoutbt);
             this.panel2.Controls.Add(this.Userbt);
@@ -131,11 +135,11 @@
             this.Userbt.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.Userbt.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Userbt.ForeColor = System.Drawing.Color.Black;
-            this.Userbt.Location = new System.Drawing.Point(6, 471);
+            this.Userbt.Location = new System.Drawing.Point(6, 460);
             this.Userbt.Name = "Userbt";
             this.Userbt.Size = new System.Drawing.Size(228, 56);
             this.Userbt.TabIndex = 29;
-            this.Userbt.Text = "Users";
+            this.Userbt.Text = "Costumer";
             this.Userbt.UseVisualStyleBackColor = false;
             this.Userbt.Click += new System.EventHandler(this.Userbt_Click);
             // 
@@ -144,7 +148,7 @@
             this.Bookbt.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.Bookbt.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bookbt.ForeColor = System.Drawing.Color.Black;
-            this.Bookbt.Location = new System.Drawing.Point(6, 409);
+            this.Bookbt.Location = new System.Drawing.Point(6, 398);
             this.Bookbt.Name = "Bookbt";
             this.Bookbt.Size = new System.Drawing.Size(228, 56);
             this.Bookbt.TabIndex = 27;
@@ -157,7 +161,7 @@
             this.DashBoardbt.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.DashBoardbt.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DashBoardbt.ForeColor = System.Drawing.Color.Black;
-            this.DashBoardbt.Location = new System.Drawing.Point(6, 347);
+            this.DashBoardbt.Location = new System.Drawing.Point(6, 336);
             this.DashBoardbt.Name = "DashBoardbt";
             this.DashBoardbt.Size = new System.Drawing.Size(228, 56);
             this.DashBoardbt.TabIndex = 26;
@@ -175,6 +179,7 @@
             this.label3.Size = new System.Drawing.Size(130, 18);
             this.label3.TabIndex = 22;
             this.label3.Text = "Username: Admin";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -194,6 +199,30 @@
             this.panelContainer.Size = new System.Drawing.Size(1258, 744);
             this.panelContainer.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(8, 522);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(228, 56);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Borrow/Return";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(8, 584);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(228, 56);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Employee";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // AdminMainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -206,6 +235,7 @@
             this.Name = "AdminMainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMainform";
+            this.Load += new System.EventHandler(this.DashBoard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -230,5 +260,7 @@
         private System.Windows.Forms.Button DashBoardbt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

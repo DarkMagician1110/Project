@@ -64,7 +64,19 @@
     <Compile Include="AdDashBoard.Designer.cs">
       <DependentUpon>AdDashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="BorrowAndReturn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BorrowAndReturn.Designer.cs">
+      <DependentUpon>BorrowAndReturn.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="Employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMainform.resx">
       <DependentUpon>AdminMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowAndReturn.resx">
+      <DependentUpon>BorrowAndReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignInForm.resx">
       <DependentUpon>SignInForm.cs</DependentUpon>
