@@ -22,7 +22,7 @@ namespace Quanlithuvien
 
         private void Registerform_Load(object sender, EventArgs e)
         {
-            txtPassword.UseSystemPasswordChar = true;
+            txtConfirm.UseSystemPasswordChar = true;
             txtConfirm.UseSystemPasswordChar = true;
         }
 
@@ -32,32 +32,25 @@ namespace Quanlithuvien
             Application.Exit();
         }
 
-        private void Register_loginbtn_Click(object sender, EventArgs e)
-        {
-            SignInForm loginForm = new SignInForm();
-            loginForm.Show();
-            this.Hide();
-        }
-
         private void Register_showpass_CheckedChanged(object sender, EventArgs e)
         {
             if (chkPass.Checked)
             {
-                txtPassword.UseSystemPasswordChar = false;
+                txtConfirm.UseSystemPasswordChar = false;
                 txtConfirm.UseSystemPasswordChar = false;
             }
             else
             {
-                txtPassword.UseSystemPasswordChar = true;
+                txtConfirm.UseSystemPasswordChar = true;
                 txtConfirm.UseSystemPasswordChar = true;
             }
         }
 
-        private void btnSignUp_Click(object sender, EventArgs e)
+        private void btn_Register_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtPassword.Text != txtConfirm.Text)
+                if (txtConfirm.Text != txtConfirm.Text)
                 {
                     MessageBox.Show("Password and Confirm Password do not match.");
                     return;
@@ -66,7 +59,7 @@ namespace Quanlithuvien
                 conn = dBregister.GetConnection();
                 conn.Open();
 
-                string checkStr = "SELECT COUNT(*) FROM QLDANGNHAP WHERE UserName = @username";
+                string checkStr = "SELECT COUNT(*) FROM THUTHU WHERE UserName = @username";
                 SqlCommand checkCmd = new SqlCommand(checkStr, conn);
                 checkCmd.Parameters.AddWithValue("@username", txtUsername.Text);
                 int userCount = (int)checkCmd.ExecuteScalar();
@@ -76,10 +69,10 @@ namespace Quanlithuvien
                     return;
                 }
 
-                string sqlStr = "INSERT INTO QLDANGNHAP (UserName, PassWord) VALUES (@username, @password)";
+                string sqlStr = "INSERT INTO THUTHU (UserName, PassWord) VALUES (@username, @password)";
                 cmd = new SqlCommand(sqlStr, conn);
                 cmd.Parameters.AddWithValue("@username", txtUsername.Text);
-                cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+                cmd.Parameters.AddWithValue("@password", txtConfirm.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registration Successful!");
             }
@@ -93,5 +86,11 @@ namespace Quanlithuvien
             }
         }
 
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            SignInForm loginForm = new SignInForm();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }

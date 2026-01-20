@@ -42,29 +42,46 @@ namespace Quanlithuvien
             conn.Close();                        // Đóng kết nối
             dataGridView1.ClearSelection();
         }
+
         private void Books_Load(object sender, EventArgs e)
         {
+            if (Session.Role == "READER")
+            {
+                btnAdd.Enabled = false;
+                btnUpdate.Enabled = false;
+                btnDelete.Enabled = false;
+            }
+            cboOption.SelectedIndex = 0;
             string query = "select * from DAUSACH";
             LoadData(query);
         }
-        private void ResetText(List<Control> controls)
+
+        private void txtSearchName_TextChanged(object sender, EventArgs e)
         {
-            foreach (Control control in controls)
-            {
-                if(control is ListBox listBox) listBox.SelectedIndex = -1;
-                else control.Text = string.Empty;
-            }
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string str = txtSearchName.Text, query = "", choice = "";
-            if (listBox3.SelectedItem != null) choice = listBox3.SelectedItem.ToString();
+            string query = "", choice = cboOption.SelectedItem.ToString();
             string key = txtSearchName.Text;
-            if (key == "" || choice == "")
+
+
+            switch (choice)
             {
-                MessageBox.Show("Vui lòng chọn tiêu chí và nhập từ khóa tìm kiếm!");
-                return;
+                case "Name":
+                    query = $"select * from DAUSACH  where TenSach like N'%{key}%'";
+                    break;
+                case "Author":
+                    query = $"select * from DAUSACH  where TacGia like N'%{key}%'";
+                    break;
+                case "Category":
+                    query = $"select * from DAUSACH  where TheLoai like N'%{key}%'";
+                    break;
             }
+            LoadData(query);
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            string query = "", choice = cboOption.SelectedItem.ToString();
+            string key = txtSearchName.Text;
+
 
             switch (choice)
             {
@@ -84,53 +101,57 @@ namespace Quanlithuvien
         private void btnAdd_Click(object sender, EventArgs e)
         {
             txtID.Focus();
-            if (txtID.Text == "" || txtName.Text == "" || txtQuanlity.Text == "")
+            if (txtID.Text == "" || txtName.Text == "")
             {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin sách(ID, Name, SL) !");
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin sách(ID, Name)!");
                 return;
             }
+
             try
             {
                 DBConnect dBConnect = new DBConnect();
                 conn = dBConnect.GetConnection();
                 conn.Open();
 
-                string insertQuery = "INSERT INTO DAUSACH (IDSach, TenSach, TheLoai, TacGia, NhaXuatBan, NamXuatBan, NgayNhap, SL) " +
-                                     "VALUES (@IDSach, @TenSach, @TheLoai, @TacGia, @NhaXuatBan, @NamXuatBan,@NgayNhap, @SoLuong)";
+                // ===== 1. KIỂM TRA TRÙNG MÃ SÁCH =====
+                string checkQuery = "SELECT COUNT(*) FROM DAUSACH WHERE IDSach = @IDSach";
+                SqlCommand checkCmd = new SqlCommand(checkQuery, conn);
+                checkCmd.Parameters.AddWithValue("@IDSach", txtID.Text);
+
+                int count = (int)checkCmd.ExecuteScalar();
+
+                if (count > 0)
+                {
+                    MessageBox.Show("Mã sách đã tồn tại! Vui lòng nhập mã khác.");
+                    conn.Close();
+                    return;
+                }
+
+                // ===== 2. THÊM SÁCH =====
+                string insertQuery = @"INSERT INTO DAUSACH 
+                (IDSach, TenSach, TheLoai, TacGia, NhaXuatBan, NamXuatBan)
+                VALUES 
+                (@IDSach, @TenSach, @TheLoai, @TacGia, @NhaXuatBan, @NamXuatBan)";
+
                 cmd = new SqlCommand(insertQuery, conn);
-                if (txtReceivedDate.Text == "")
-                {
-                    cmd.Parameters.AddWithValue("@NgayNhap", DBNull.Value);
-                }
-                else
-                {
-                    if (!DateTime.TryParse(txtReceivedDate.Text, out DateTime ngayNhap))
-                    {
-                        MessageBox.Show("Ngày nhập không hợp lệ!");
-                        return;
-                    }
-                    else
-                    {
-                        cmd.Parameters.AddWithValue("@NgayNhap", ngayNhap);
-                    }
-                }
                 cmd.Parameters.AddWithValue("@IDSach", txtID.Text);
                 cmd.Parameters.AddWithValue("@TenSach", txtName.Text);
-                if (lbCategory.SelectedItem != null)
-                    cmd.Parameters.AddWithValue("@TheLoai", lbCategory.SelectedItem.ToString());
-                else cmd.Parameters.AddWithValue("@TheLoai", "");
+                cmd.Parameters.AddWithValue("@TheLoai", cboCategory.SelectedItem != null ? cboCategory.SelectedItem.ToString() : "");
                 cmd.Parameters.AddWithValue("@TacGia", txtAuthor.Text);
                 cmd.Parameters.AddWithValue("@NhaXuatBan", txtNXB.Text);
                 cmd.Parameters.AddWithValue("@NamXuatBan", txtNamXB.Text);
-                cmd.Parameters.AddWithValue("@SoLuong", txtQuanlity.Text);
+
                 int k = cmd.ExecuteNonQuery();
                 conn.Close();
-                ResetText(new List<Control> { txtID, txtName, txtAuthor, txtNXB, txtNamXB, txtQuanlity, txtReceivedDate });
+
                 if (k > 0)
                 {
                     MessageBox.Show("Thêm sách thành công!");
-                    string query = "select * from DAUSACH";
-                    LoadData(query);
+                    LoadData("select * from DAUSACH");
+                    GeneralMethod.ResetText(new List<Control>
+                {
+                    txtID, txtName, txtAuthor, cboCategory, txtNXB, txtNamXB
+                });
                 }
                 else
                 {
@@ -144,9 +165,8 @@ namespace Quanlithuvien
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
-        { 
-
-            if (txtID.Text == "" || txtName.Text == "" || txtAuthor.Text == "" || lbCategory.SelectedItem.ToString() == "" || txtNXB.Text == "" || txtNamXB.Text == "" || txtQuanlity.Text == "" || txtReceivedDate.Text == "")
+        {
+            if (txtID.Text == "" || txtName.Text == "" || txtAuthor.Text == "" || cboCategory.SelectedItem.ToString() == "" || txtNXB.Text == "" || txtNamXB.Text == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin sách!");
                 return;
@@ -156,40 +176,23 @@ namespace Quanlithuvien
                 DBConnect dBConnect = new DBConnect();
                 conn = dBConnect.GetConnection();
                 conn.Open();
-                string updateQuery = "UPDATE DAUSACH SET TenSach = @TenSach, TheLoai = @TheLoai, TacGia = @TacGia, NhaXuatBan = @NhaXuatBan, NamXuatBan = @NamXuatBan, NgayNhap = @NgayNhap, SL = @SoLuong WHERE IDSach = @IDSach";
+                string updateQuery = "UPDATE DAUSACH SET TenSach = @TenSach, TheLoai = @TheLoai, TacGia = @TacGia, NhaXuatBan = @NhaXuatBan, NamXuatBan = @NamXuatBan WHERE IDSach = @IDSach";
                 cmd = new SqlCommand(updateQuery, conn);
-                if(txtReceivedDate.Text == "")
-                {
-                    cmd.Parameters.AddWithValue("@NgayNhap", DBNull.Value);
-                }
-                else
-                {
-                    if (!DateTime.TryParse(txtReceivedDate.Text, out DateTime ngayNhap))
-                    {
-                        MessageBox.Show("Ngày nhập không hợp lệ!");
-                        return;
-                    }
-                    else
-                    {
-                        cmd.Parameters.AddWithValue("@NgayNhap", ngayNhap);
-                    }
-                }
                 cmd.Parameters.AddWithValue("@IDSach", txtID.Text);
                 cmd.Parameters.AddWithValue("@TenSach", txtName.Text);
-                if(lbCategory.SelectedItem != null) cmd.Parameters.AddWithValue("@TheLoai", lbCategory.SelectedItem.ToString());
+                if (cboCategory.SelectedItem != null) cmd.Parameters.AddWithValue("@TheLoai", cboCategory.SelectedItem.ToString());
                 else cmd.Parameters.AddWithValue("@TheLoai", "");
                 cmd.Parameters.AddWithValue("@TacGia", txtAuthor.Text);
                 cmd.Parameters.AddWithValue("@NhaXuatBan", txtNXB.Text);
                 cmd.Parameters.AddWithValue("@NamXuatBan", txtNamXB.Text);
-                cmd.Parameters.AddWithValue("@SoLuong", txtQuanlity.Text);
                 int k = cmd.ExecuteNonQuery();
                 conn.Close();
-                ResetText(new List<Control> { txtID, txtName, txtAuthor, txtNXB, txtNamXB, txtQuanlity, txtReceivedDate });
                 if (k > 0)
                 {
                     MessageBox.Show("Cập nhật sách thành công!");
                     string query = "select * from DAUSACH";
                     LoadData(query);
+                    GeneralMethod.ResetText(new List<Control> { txtID, txtName, txtAuthor, cboCategory, txtNXB, txtNamXB });
                 }
                 else
                 {
@@ -221,12 +224,12 @@ namespace Quanlithuvien
                 cmd.Parameters.AddWithValue("@IDSach", IDSach);
                 int k = cmd.ExecuteNonQuery();
                 conn.Close();
-                ResetText(new List<Control> { txtID, txtName, txtAuthor, txtNXB, txtNamXB, txtQuanlity, txtReceivedDate });
                 if (k > 0)
                 {
                     MessageBox.Show("Xóa sách thành công!");
                     string querySelect = "select * from DAUSACH";
                     LoadData(querySelect);
+                    GeneralMethod.ResetText(new List<Control> { txtID, txtName, txtAuthor, cboCategory, txtNXB, txtNamXB });
                 }
                 else
                 {
@@ -239,19 +242,17 @@ namespace Quanlithuvien
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGridView1.SelectedRows[0];
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 txtID.Text = row.Cells["IDSach"].Value.ToString();
                 txtName.Text = row.Cells["TenSach"].Value.ToString();
-                lbCategory.SelectedItem = row.Cells["TheLoai"].Value.ToString();
+                cboCategory.SelectedItem = row.Cells["TheLoai"].Value.ToString();
                 txtAuthor.Text = row.Cells["TacGia"].Value.ToString();
                 txtNXB.Text = row.Cells["NhaXuatBan"].Value.ToString();
                 txtNamXB.Text = row.Cells["NamXuatBan"].Value.ToString();
-                txtReceivedDate.Text = Convert.ToDateTime(row.Cells["NgayNhap"].Value).ToString("dd/MM/yyyy");
-                txtQuanlity.Text = row.Cells["SL"].Value.ToString();
             }
         }
     }

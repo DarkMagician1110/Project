@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.Charts.WinForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.Charts.WinForms.1.1.0\lib\net472\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Ububox.G2Crack.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,12 +80,14 @@
       <DependentUpon>BorrowAndReturn.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnect.cs" />
-    <Compile Include="Employee.cs">
+    <Compile Include="GeneralMethod.cs" />
+    <Compile Include="Librarian.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <Compile Include="Librarian.Designer.cs">
+      <DependentUpon>Librarian.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session.cs" />
     <Compile Include="SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +102,11 @@
     <Compile Include="Registerform.Designer.cs">
       <DependentUpon>Registerform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Costumer.cs">
+    <Compile Include="Readers.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Costumer.Designer.cs">
-      <DependentUpon>Costumer.cs</DependentUpon>
+    <Compile Include="Readers.Designer.cs">
+      <DependentUpon>Readers.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdDashBoard.resx">
       <DependentUpon>AdDashBoard.cs</DependentUpon>
@@ -109,8 +120,8 @@
     <EmbeddedResource Include="BorrowAndReturn.resx">
       <DependentUpon>BorrowAndReturn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee.resx">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <EmbeddedResource Include="Librarian.resx">
+      <DependentUpon>Librarian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignInForm.resx">
       <DependentUpon>SignInForm.cs</DependentUpon>
@@ -127,9 +138,10 @@
     <EmbeddedResource Include="Registerform.resx">
       <DependentUpon>Registerform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Costumer.resx">
-      <DependentUpon>Costumer.cs</DependentUpon>
+    <EmbeddedResource Include="Readers.resx">
+      <DependentUpon>Readers.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
