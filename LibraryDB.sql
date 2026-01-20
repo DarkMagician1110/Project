@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [QLTV]    Script Date: 20/1/2026 4:07:23 PM ******/
+/****** Object:  Database [QLTV]    Script Date: 20/1/2026 7:51:30 PM ******/
 CREATE DATABASE [QLTV]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -84,7 +84,7 @@ ALTER DATABASE [QLTV] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLI
 GO
 USE [QLTV]
 GO
-/****** Object:  Table [dbo].[DAUSACH]    Script Date: 20/1/2026 4:07:24 PM ******/
+/****** Object:  Table [dbo].[DAUSACH]    Script Date: 20/1/2026 7:51:31 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -102,7 +102,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[DOCGIA]    Script Date: 20/1/2026 4:07:24 PM ******/
+/****** Object:  Table [dbo].[DOCGIA]    Script Date: 20/1/2026 7:51:31 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -121,7 +121,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PHIEUMUON]    Script Date: 20/1/2026 4:07:24 PM ******/
+/****** Object:  Table [dbo].[PHIEUMUON]    Script Date: 20/1/2026 7:51:31 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -141,7 +141,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SACH]    Script Date: 20/1/2026 4:07:24 PM ******/
+/****** Object:  Table [dbo].[SACH]    Script Date: 20/1/2026 7:51:31 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -158,7 +158,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[THUTHU]    Script Date: 20/1/2026 4:07:24 PM ******/
+/****** Object:  Table [dbo].[THUTHU]    Script Date: 20/1/2026 7:51:31 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -542,7 +542,7 @@ INSERT [dbo].[THUTHU] ([MaNV], [HoTen], [Username], [Password], [TrangThai], [Va
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ__THUTHU__536C85E42DC5E7D4]    Script Date: 20/1/2026 4:07:24 PM ******/
+/****** Object:  Index [UQ__THUTHU__536C85E42DC5E7D4]    Script Date: 20/1/2026 7:51:31 PM ******/
 ALTER TABLE [dbo].[THUTHU] ADD UNIQUE NONCLUSTERED 
 (
 	[Username] ASC
@@ -588,12 +588,65 @@ ALTER TABLE [dbo].[PHIEUMUON]  WITH CHECK ADD  CONSTRAINT [CK_PM_TRA] CHECK  (([
 GO
 ALTER TABLE [dbo].[PHIEUMUON] CHECK CONSTRAINT [CK_PM_TRA]
 GO
-ALTER TABLE [dbo].[SACH]  WITH CHECK ADD  CONSTRAINT [CK_SACH_TINHTRANG] CHECK  (([TinhTrang]=(3) OR [TinhTrang]=(2) OR [TinhTrang]=(1) OR [TinhTrang]=(0)))
+ALTER TABLE [dbo].[SACH]  WITH CHECK ADD  CONSTRAINT [CK_SACH_TINHTRANG] CHECK  (([TinhTrang]=(4) OR [TinhTrang]=(3) OR [TinhTrang]=(2) OR [TinhTrang]=(1) OR [TinhTrang]=(0)))
 GO
 ALTER TABLE [dbo].[SACH] CHECK CONSTRAINT [CK_SACH_TINHTRANG]
+GO
+/****** Object:  Trigger [dbo].[TRG_TINH_PHI_PHAT]    Script Date: 20/1/2026 7:51:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TRIGGER [dbo].[TRG_TINH_PHI_PHAT]
+ON [dbo].[PHIEUMUON]
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE PM
+    SET PhiPhat =
+        CASE
+            WHEN I.NgayTra IS NULL THEN 0
+            WHEN I.NgayTra <= I.HanTra THEN 0
+            ELSE DATEDIFF(DAY, I.HanTra, I.NgayTra) * 20000
+        END
+    FROM PHIEUMUON PM
+    JOIN inserted I ON PM.MaPhieu = I.MaPhieu
+    JOIN deleted  D ON D.MaPhieu = I.MaPhieu
+    WHERE D.NgayTra IS NULL
+      AND I.NgayTra IS NOT NULL;
+END;
+GO
+ALTER TABLE [dbo].[PHIEUMUON] ENABLE TRIGGER [TRG_TINH_PHI_PHAT]
+GO
+/****** Object:  Trigger [dbo].[TRG_SET_GHICHU_SACH]    Script Date: 20/1/2026 7:51:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TRIGGER [dbo].[TRG_SET_GHICHU_SACH]
+ON [dbo].[SACH]
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE S
+    SET GhiChu =
+        CASE S.TinhTrang
+            WHEN 0 THEN N'Tình trạng: Có sẵn'
+            WHEN 1 THEN N'Tình trạng: Đang được mượn'
+            WHEN 2 THEN N'Tình trạng: Hư hỏng'
+            WHEN 3 THEN N'Tình trạng: Mất'
+        END
+    FROM SACH S
+    JOIN inserted I ON S.AccessionNo = I.AccessionNo;
+END;
+GO
+ALTER TABLE [dbo].[SACH] ENABLE TRIGGER [TRG_SET_GHICHU_SACH]
 GO
 USE [master]
 GO
 ALTER DATABASE [QLTV] SET  READ_WRITE 
 GO
-
