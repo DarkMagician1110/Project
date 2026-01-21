@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [QLTV]    Script Date: 20/1/2026 7:51:30 PM ******/
+/****** Object:  Database [QLTV]    Script Date: 21/1/2026 8:37:23 AM ******/
 CREATE DATABASE [QLTV]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -84,7 +84,7 @@ ALTER DATABASE [QLTV] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLI
 GO
 USE [QLTV]
 GO
-/****** Object:  Table [dbo].[DAUSACH]    Script Date: 20/1/2026 7:51:31 PM ******/
+/****** Object:  Table [dbo].[DAUSACH]    Script Date: 21/1/2026 8:37:23 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -102,7 +102,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[DOCGIA]    Script Date: 20/1/2026 7:51:31 PM ******/
+/****** Object:  Table [dbo].[DOCGIA]    Script Date: 21/1/2026 8:37:23 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -121,7 +121,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PHIEUMUON]    Script Date: 20/1/2026 7:51:31 PM ******/
+/****** Object:  Table [dbo].[PHIEUMUON]    Script Date: 21/1/2026 8:37:23 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -141,7 +141,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SACH]    Script Date: 20/1/2026 7:51:31 PM ******/
+/****** Object:  Table [dbo].[SACH]    Script Date: 21/1/2026 8:37:23 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -158,7 +158,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[THUTHU]    Script Date: 20/1/2026 7:51:31 PM ******/
+/****** Object:  Table [dbo].[THUTHU]    Script Date: 21/1/2026 8:37:23 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -310,7 +310,7 @@ SET IDENTITY_INSERT [dbo].[PHIEUMUON] ON
 GO
 INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (1, N'TV003', N'KH001', N'NV001', CAST(N'2025-11-10' AS Date), CAST(N'2025-12-10' AS Date), CAST(N'2025-12-27' AS Date), 340000)
 GO
-INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (2, N'TV004', N'KH004', N'NV001', CAST(N'2025-11-20' AS Date), CAST(N'2025-12-20' AS Date), NULL, NULL)
+INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (2, N'TV004', N'KH004', N'NV001', CAST(N'2025-11-20' AS Date), CAST(N'2025-12-20' AS Date), CAST(N'2026-01-20' AS Date), 620000)
 GO
 INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (3, N'TV006', N'KH004', N'NV001', CAST(N'2025-11-11' AS Date), CAST(N'2025-12-11' AS Date), CAST(N'2026-01-02' AS Date), 440000)
 GO
@@ -324,7 +324,7 @@ INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], 
 GO
 INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (8, N'TV014', N'KH006', N'NV001', CAST(N'2025-11-18' AS Date), CAST(N'2025-12-18' AS Date), NULL, NULL)
 GO
-INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (9, N'TV015', N'KH001', N'NV001', CAST(N'2025-11-18' AS Date), CAST(N'2025-12-18' AS Date), NULL, NULL)
+INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (9, N'TV015', N'KH001', N'NV001', CAST(N'2025-11-18' AS Date), CAST(N'2025-12-18' AS Date), CAST(N'2026-01-20' AS Date), 660000)
 GO
 INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (10, N'TV016', N'KH007', N'NV001', CAST(N'2025-11-11' AS Date), CAST(N'2025-12-11' AS Date), CAST(N'2026-01-02' AS Date), 440000)
 GO
@@ -336,7 +336,7 @@ INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], 
 GO
 INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (14, N'TV023', N'KH007', N'NV001', CAST(N'2025-12-02' AS Date), CAST(N'2026-01-01' AS Date), NULL, NULL)
 GO
-INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (15, N'TV027', N'KH011', N'NV001', CAST(N'2025-10-15' AS Date), CAST(N'2025-11-14' AS Date), NULL, NULL)
+INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (15, N'TV027', N'KH011', N'NV001', CAST(N'2025-10-15' AS Date), CAST(N'2025-11-14' AS Date), CAST(N'2026-01-20' AS Date), 1340000)
 GO
 INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (16, N'TV030', N'KH010', N'NV001', CAST(N'2025-11-10' AS Date), CAST(N'2025-12-10' AS Date), NULL, NULL)
 GO
@@ -372,13 +372,23 @@ INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], 
 GO
 INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (32, N'TV065', N'KH020', N'NV001', CAST(N'2025-11-11' AS Date), CAST(N'2025-12-11' AS Date), NULL, NULL)
 GO
-INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (33, N'TV067', N'KH020', N'NV001', CAST(N'2025-11-11' AS Date), CAST(N'2025-12-11' AS Date), NULL, NULL)
+INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (33, N'TV067', N'KH020', N'NV001', CAST(N'2025-11-11' AS Date), CAST(N'2025-12-11' AS Date), CAST(N'2026-01-20' AS Date), 800000)
 GO
 INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (34, N'TV074', N'KH002', N'NV001', CAST(N'2025-11-01' AS Date), CAST(N'2025-12-01' AS Date), CAST(N'2026-01-20' AS Date), 1000000)
 GO
 INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (41, N'TV062', N'KH003', N'NV002', CAST(N'2025-12-27' AS Date), CAST(N'2026-01-27' AS Date), CAST(N'2026-01-18' AS Date), 0)
 GO
 INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (42, N'TV073', N'KH001', N'NV001', CAST(N'2026-01-01' AS Date), CAST(N'2026-02-01' AS Date), CAST(N'2026-01-02' AS Date), 0)
+GO
+INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (43, N'TV001', N'KH019', N'NV001', CAST(N'2026-01-20' AS Date), CAST(N'2026-02-20' AS Date), CAST(N'2026-01-20' AS Date), NULL)
+GO
+INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (49, N'TV001', N'KH019', N'NV001', CAST(N'2026-01-20' AS Date), CAST(N'2026-02-20' AS Date), CAST(N'2026-01-21' AS Date), NULL)
+GO
+INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (50, N'TV002', N'KH019', N'NV001', CAST(N'2026-01-20' AS Date), CAST(N'2026-02-20' AS Date), CAST(N'2026-01-20' AS Date), NULL)
+GO
+INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (51, N'TV058', N'KH019', N'NV001', CAST(N'2026-01-20' AS Date), CAST(N'2026-02-19' AS Date), CAST(N'2026-01-20' AS Date), 0)
+GO
+INSERT [dbo].[PHIEUMUON] ([MaPhieu], [AccessionNo], [MaKH], [IDNV], [NgayMuon], [HanTra], [NgayTra], [PhiPhat]) VALUES (52, N'TV003', N'KH001', N'NV001', CAST(N'2026-01-21' AS Date), CAST(N'2026-02-20' AS Date), CAST(N'2026-01-21' AS Date), 0)
 GO
 SET IDENTITY_INSERT [dbo].[PHIEUMUON] OFF
 GO
@@ -388,19 +398,19 @@ INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu])
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV003', N'AV001', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
-INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV004', N'AV002', 1, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
+INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV004', N'AV002', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
-INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV005', N'AV002', 1, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
+INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV005', N'AV002', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
-INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV006', N'AV003', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
+INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV006', N'AV003', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV007', N'AV003', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
-INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV008', N'AV004', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
+INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV008', N'AV004', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV009', N'AV004', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
-INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV010', N'AV005', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
+INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV010', N'AV005', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV011', N'AV005', 1, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
 GO
@@ -410,9 +420,9 @@ INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu])
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV014', N'AV007', 1, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
 GO
-INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV015', N'CT001', 1, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
+INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV015', N'CT001', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
-INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV016', N'CT001', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
+INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV016', N'CT001', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV017', N'CT001', 1, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
 GO
@@ -434,7 +444,7 @@ INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu])
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV026', N'CT004', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
-INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV027', N'CT005', 1, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
+INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV027', N'CT005', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV028', N'CT005', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
@@ -504,7 +514,7 @@ INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu])
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV061', N'TL003', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
-INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV062', N'TL003', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
+INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV062', N'TL003', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV063', N'TT001', 1, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
 GO
@@ -514,7 +524,7 @@ INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu])
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV066', N'TT001', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
-INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV067', N'TT002', 1, CAST(N'2025-12-27' AS Date), N'Tình trạng: Đang được mượn')
+INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV067', N'TT002', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV068', N'TT003', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
@@ -526,7 +536,7 @@ INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu])
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV072', N'TT007', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
-INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV073', N'TT007', 1, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
+INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV073', N'TT007', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
 INSERT [dbo].[SACH] ([AccessionNo], [IDSach], [TinhTrang], [NgayNhap], [GhiChu]) VALUES (N'TV074', N'TT007', 0, CAST(N'2025-12-27' AS Date), N'Tình trạng: Có sẵn')
 GO
@@ -542,7 +552,7 @@ INSERT [dbo].[THUTHU] ([MaNV], [HoTen], [Username], [Password], [TrangThai], [Va
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ__THUTHU__536C85E42DC5E7D4]    Script Date: 20/1/2026 7:51:31 PM ******/
+/****** Object:  Index [UQ__THUTHU__536C85E42DC5E7D4]    Script Date: 21/1/2026 8:37:23 AM ******/
 ALTER TABLE [dbo].[THUTHU] ADD UNIQUE NONCLUSTERED 
 (
 	[Username] ASC
@@ -588,11 +598,11 @@ ALTER TABLE [dbo].[PHIEUMUON]  WITH CHECK ADD  CONSTRAINT [CK_PM_TRA] CHECK  (([
 GO
 ALTER TABLE [dbo].[PHIEUMUON] CHECK CONSTRAINT [CK_PM_TRA]
 GO
-ALTER TABLE [dbo].[SACH]  WITH CHECK ADD  CONSTRAINT [CK_SACH_TINHTRANG] CHECK  (([TinhTrang]=(3) OR [TinhTrang]=(2) OR [TinhTrang]=(1) OR [TinhTrang]=(0)))
+ALTER TABLE [dbo].[SACH]  WITH CHECK ADD  CONSTRAINT [CK_SACH_TINHTRANG] CHECK  (([TinhTrang]=(4) OR [TinhTrang]=(3) OR [TinhTrang]=(2) OR [TinhTrang]=(1) OR [TinhTrang]=(0)))
 GO
 ALTER TABLE [dbo].[SACH] CHECK CONSTRAINT [CK_SACH_TINHTRANG]
 GO
-/****** Object:  Trigger [dbo].[TRG_TINH_PHI_PHAT]    Script Date: 20/1/2026 7:51:31 PM ******/
+/****** Object:  Trigger [dbo].[TRG_TINH_PHI_PHAT]    Script Date: 21/1/2026 8:37:23 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -620,7 +630,28 @@ END;
 GO
 ALTER TABLE [dbo].[PHIEUMUON] ENABLE TRIGGER [TRG_TINH_PHI_PHAT]
 GO
-/****** Object:  Trigger [dbo].[TRG_SET_GHICHU_SACH]    Script Date: 20/1/2026 7:51:31 PM ******/
+/****** Object:  Trigger [dbo].[TRG_TU_DONG_HANTRA]    Script Date: 21/1/2026 8:37:23 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TRIGGER [dbo].[TRG_TU_DONG_HANTRA]
+ON [dbo].[PHIEUMUON]
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE PM
+    SET HanTra = DATEADD(DAY, 30, I.NgayMuon)
+    FROM PHIEUMUON PM
+    JOIN inserted I ON PM.MaPhieu = I.MaPhieu
+    WHERE I.HanTra IS NULL;
+END;
+GO
+ALTER TABLE [dbo].[PHIEUMUON] ENABLE TRIGGER [TRG_TU_DONG_HANTRA]
+GO
+/****** Object:  Trigger [dbo].[TRG_SET_GHICHU_SACH]    Script Date: 21/1/2026 8:37:24 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -650,4 +681,3 @@ USE [master]
 GO
 ALTER DATABASE [QLTV] SET  READ_WRITE 
 GO
-
