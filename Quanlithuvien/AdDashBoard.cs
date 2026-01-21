@@ -76,7 +76,7 @@ namespace Quanlithuvien
             return cnt;
         }
         
-        private void LoadData(string sqlStr)
+        public void LoadData(string sqlStr)
         {
             DBConnect DataBooks = new DBConnect();
             conn = DataBooks.GetConnection();   // Tạo kết nối CSDL

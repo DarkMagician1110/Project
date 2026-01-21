@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Quanlithuvien
 {
@@ -161,6 +162,15 @@ namespace Quanlithuvien
                 cmd = new SqlCommand(updateSach, conn);
                 cmd.Parameters.AddWithValue("@idBook", idBook);
                 cmd.ExecuteNonQuery();
+                AdminMainform adminMainForm = (AdminMainform)this.Parent.Parent;
+                if (adminMainForm != null)
+                {
+                    var ucDashBoard = adminMainForm.Controls.Find("AdDashBoard", true).FirstOrDefault() as AdDashBoard;
+                    if (ucDashBoard != null)
+                    {
+                        ucDashBoard.LoadData("SELECT * FROM SACH");
+                    }
+                }
 
                 // 4. Thêm phiếu mượn
                 string insertPhieuMuon =
@@ -250,7 +260,16 @@ namespace Quanlithuvien
                 cmd = new SqlCommand(updateSach, conn);
                 cmd.Parameters.AddWithValue("@idBook", idBook);
                 cmd.ExecuteNonQuery();
-
+                AdminMainform adminMainForm = (AdminMainform)this.Parent.Parent;
+                if(adminMainForm != null)
+                {
+                    var ucDashBoard = adminMainForm.Controls.Find("AdDashBoard", true).FirstOrDefault() as AdDashBoard;
+                    if(ucDashBoard != null)
+                    {
+                        ucDashBoard.LoadData("SELECT * FROM SACH");
+                    }
+                } 
+                    
                 // 3. Cập nhật phiếu mượn
                 string updatePhieuMuon =
                     @"UPDATE PHIEUMUON
